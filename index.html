@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - Pensées Actuelles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background-color: #f5f5f5;
+            --card-color: #ffffff;
+            --text-color: #333333;
+            --text-light: #777777;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* En-tête */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .user-actions a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 10px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+
+        .nav-links li {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Contenu principal */
+        .privacy-content {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: var(--card-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        p, li {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .no-data {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Barre de navigation en bas */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Styles pour le mode sombre */
+        body.dark-mode {
+            --background-color: #1a1a1a;
+            --card-color: #2d2d2d;
+            --text-color: #f5f5f5;
+            --text-light: #aaaaaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">PENSEES ACTUELLES</a>
+                <div class="user-actions">
+                    <a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="bibliographie.html">Biographie</a></li>
+                <li><a href="privacy.html" class="active">Confidentialité</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <div class="privacy-content">
+            <div class="privacy-header">
+                <h1>Politique de Confidentialité</h1>
+                <p class="last-updated">Dernière mise à jour: 15 novembre 2023</p>
+            </div>
+
+            <section>
+                <h2>Introduction</h2>
+                <p>Cette politique de confidentialité s'applique à l'application "Pensées Actuelles" et explique comment nous traitons vos données personnelles.</p>
+            </section>
+
+            <section>
+                <h2>Collecte de données</h2>
+                <div class="no-data">
+                    <p><strong>Nous ne collectons aucune donnée personnelle.</strong></p>
+                    <p>Notre application ne demande ni ne collecte aucune information personnelle identifiable.</p>
+                </div>
+                <p>Plus précisément :</p>
+                <ul>
+                    <li>Nous ne demandons pas d'inscription ou de création de compte</li>
+                    <li>Nous ne collectons pas d'adresses e-mail, noms ou autres informations personnelles</li>
+                    <li>Nous n'avons pas accès à vos contacts, photos, fichiers ou autres données de l'appareil</li>
+                    <li>Nous ne suivons pas votre localisation</li>
+                    <li>Nous n'utilisons pas de cookies de suivi</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Stockage local</h2>
+                <p>L'application utilise uniquement le stockage local de votre appareil pour :</p>
+                <ul>
+                    <li>Enregistrer vos préférences de lecture (taille de police, thème sombre/clair)</li>
+                    <li>Mémoriser vos livres marqués comme favoris</li>
+                </ul>
+                <p>Ces données restent uniquement sur votre appareil et ne sont jamais transmises à nos serveurs ou à des tiers.</p>
+            </section>
+
+            <section>
+                <h2>Contenus tiers</h2>
+                <p>Notre application affiche des contenus (images de couverture de livres) hébergés sur des services tiers (Postimg.cc).</p>
+                <p>Ces services peuvent collecter certaines informations selon leurs propres politiques de confidentialité. Nous vous encourageons à consulter leurs politiques respectives.</p>
+            </section>
+
+            <section>
+                <h2>Modifications de cette politique</h2>
+                <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera reflétée par une mise à jour de la date "Dernière mise à jour" en haut de cette page.</p>
+            </section>
+
+            <section>
+                <h2>Nous contacter</h2>
+                <p>Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à travers l'application.</p>
+            </section>
+
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Retour à l'application
+            </a>
+        </div>
+    </div>
+
+    <!-- Barre de navigation en bas -->
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <div class="nav-icon"><i class="fas fa-home"></i></div>
+            <span>Accueil</span>
+        </a>
+        <a href="bibliographie.html" class="nav-item">
+            <div class="nav-icon"><i class="fas fa-user-graduate"></i></div>
+            <span>Biographie</span>
+        </a>
+        <a href="privacy.html" class="nav-item active">
+            <div class="nav-icon"><i class="fas fa-shield-alt"></i></div>
+            <span>Confidentialité</span>
+        </a>
+    </div>
+
+    <script>
+        // Fonctionnalité de basculement du mode sombre
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Vérifier la préférence de thème stockée
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+        
+        // Animation d'apparition progressive
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 200 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>
