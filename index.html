@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Pensées Actuelles</title>
+    <title>Pensées Actuelles - Ahmed Khalifa Niasse</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
             --accent-color: #e74c3c;
-            --background-color: #f5f5f5;
-            --card-color: #ffffff;
-            --text-color: #333333;
-            --text-light: #777777;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         * {
@@ -25,25 +24,22 @@
         }
 
         body {
-            background-color: var(--background-color);
+            background-color: #f9f9f9;
             color: var(--text-color);
             line-height: 1.6;
         }
 
         .container {
-            max-width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
-        /* En-tête */
+        /* Header */
         header {
-            background-color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            padding: 20px 0;
             box-shadow: var(--shadow);
         }
 
@@ -54,317 +50,513 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .user-actions a {
-            color: white;
-            margin-left: 15px;
-            text-decoration: none;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: var(--primary-color);
-            padding: 10px 0;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            justify-content: space-around;
         }
 
         .nav-links li {
-            margin-right: 0;
+            margin-left: 25px;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            transition: color 0.3s;
         }
 
-        .nav-links a:hover, .nav-links a.active {
-            background-color: rgba(255, 255, 255, 0.2);
+        .nav-links a:hover {
+            color: var(--light-color);
         }
 
-        /* Contenu principal */
-        .privacy-content {
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
             max-width: 800px;
-            margin: 30px auto;
-            background-color: var(--card-color);
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Book Section */
+        .book-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .book-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .book-cover {
+            flex: 1;
+            text-align: center;
+        }
+
+        .book-cover img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .book-cover img:hover {
+            transform: scale(1.03);
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        .book-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .book-author {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .book-description {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .book-details {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .detail-label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: white;
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Author Section */
+        .author-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .author-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .author-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .author-image img {
+            max-width: 100%;
+            border-radius: 10px;
             box-shadow: var(--shadow);
         }
 
-        .privacy-header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--primary-color);
+        .author-info {
+            flex: 1;
         }
 
-        h1 {
-            color: var(--secondary-color);
+        .author-name {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .author-bio {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
             margin-bottom: 10px;
         }
 
-        .last-updated {
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #eee;
-        }
-
-        p, li {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .no-data {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: var(--primary-color);
+        .footer-links a {
+            color: #ddd;
             text-decoration: none;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: 2px solid var(--primary-color);
-            border-radius: 4px;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
 
-        .back-link:hover {
-            background-color: var(--primary-color);
+        .footer-links a:hover {
             color: white;
         }
 
-        /* Barre de navigation en bas */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-        }
-
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 0.8rem;
-        }
-
-        .nav-item.active {
-            color: var(--primary-color);
-        }
-
-        .nav-icon {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        /* Styles pour le mode sombre */
-        body.dark-mode {
-            --background-color: #1a1a1a;
-            --card-color: #2d2d2d;
-            --text-color: #f5f5f5;
-            --text-light: #aaaaaa;
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .privacy-content {
-                padding: 20px;
-                margin: 20px auto;
+            .book-container, .author-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
             }
             
             .nav-links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .nav-links li {
-                margin-bottom: 10px;
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- En-tête -->
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">PENSEES ACTUELLES</a>
-                <div class="user-actions">
-                    <a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a>
-                </div>
+                <div class="logo">Pensées Actuelles</div>
+                <ul class="nav-links">
+                    <li><a href="#livre">Le Livre</a></li>
+                    <li><a href="#auteur">L'Auteur</a></li>
+                    <li><a href="#points-cles">Points Clés</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
+    <!-- Hero Section -->
+     
+
+    <!-- Book Section -->
+    <section class="book-section" id="livre">
         <div class="container">
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="bibliographie.html">Biographie</a></li>
-                <li><a href="privacy.html" class="active">Confidentialité</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Contenu principal -->
-    <div class="container">
-        <div class="privacy-content">
-            <div class="privacy-header">
-                <h1>Politique de Confidentialité</h1>
-                <p class="last-updated">Dernière mise à jour: 15 novembre 2023</p>
-            </div>
-
-            <section>
-                <h2>Introduction</h2>
-                <p>Cette politique de confidentialité s'applique à l'application "Pensées Actuelles" et explique comment nous traitons vos données personnelles.</p>
-            </section>
-
-            <section>
-                <h2>Collecte de données</h2>
-                <div class="no-data">
-                    <p><strong>Nous ne collectons aucune donnée personnelle.</strong></p>
-                    <p>Notre application ne demande ni ne collecte aucune information personnelle identifiable.</p>
+            <div class="book-container">
+                <div class="book-cover">
+                    <img src="https://i.postimg.cc/FzWn4HZM/ZESGFZ.png" alt="Couverture du livre Pensées Actuelles">
                 </div>
-                <p>Plus précisément :</p>
-                <ul>
-                    <li>Nous ne demandons pas d'inscription ou de création de compte</li>
-                    <li>Nous ne collectons pas d'adresses e-mail, noms ou autres informations personnelles</li>
-                    <li>Nous n'avons pas accès à vos contacts, photos, fichiers ou autres données de l'appareil</li>
-                    <li>Nous ne suivons pas votre localisation</li>
-                    <li>Nous n'utilisons pas de cookies de suivi</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Stockage local</h2>
-                <p>L'application utilise uniquement le stockage local de votre appareil pour :</p>
-                <ul>
-                    <li>Enregistrer vos préférences de lecture (taille de police, thème sombre/clair)</li>
-                    <li>Mémoriser vos livres marqués comme favoris</li>
-                </ul>
-                <p>Ces données restent uniquement sur votre appareil et ne sont jamais transmises à nos serveurs ou à des tiers.</p>
-            </section>
-
-            <section>
-                <h2>Contenus tiers</h2>
-                <p>Notre application affiche des contenus (images de couverture de livres) hébergés sur des services tiers (Postimg.cc).</p>
-                <p>Ces services peuvent collecter certaines informations selon leurs propres politiques de confidentialité. Nous vous encourageons à consulter leurs politiques respectives.</p>
-            </section>
-
-            <section>
-                <h2>Modifications de cette politique</h2>
-                <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera reflétée par une mise à jour de la date "Dernière mise à jour" en haut de cette page.</p>
-            </section>
-
-            <section>
-                <h2>Nous contacter</h2>
-                <p>Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à travers l'application.</p>
-            </section>
-
-            <a href="index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Retour à l'application
-            </a>
+                <div class="book-info">
+                    <h2 class="book-title">Pensées Actuelles - Tome 1</h2>
+                    <p class="book-author">Ahmed Khalifa Niasse</p>
+                    <p class="book-description">
+                        Cet ouvrage, premier d'une série de quatre tomes, explore des thématiques liées à la religion islamique, 
+                        avec un focus particulier sur l'islam confrérique sénégalais. L'auteur y analyse les dynamiques religieuses, 
+                        les enjeux socio-politiques et les déviances doctrinales, tout en mettant en avant la richesse et la profondeur 
+                        des enseignements coraniques.
+                    </p>
+                    <div class="book-details">
+                        <div class="detail-item">
+                            <div class="detail-value">4</div>
+                            <div class="detail-label">Tomes</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-value">10+</div>
+                            <div class="detail-label">Points Clés</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-value">2010-2022</div>
+                            <div class="detail-label">Période</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Lire un extrait</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Barre de navigation en bas -->
-    <div class="bottom-nav">
-        <a href="index.html" class="nav-item">
-            <div class="nav-icon"><i class="fas fa-home"></i></div>
-            <span>Accueil</span>
-        </a>
-        <a href="bibliographie.html" class="nav-item">
-            <div class="nav-icon"><i class="fas fa-user-graduate"></i></div>
-            <span>Biographie</span>
-        </a>
-        <a href="privacy.html" class="nav-item active">
-            <div class="nav-icon"><i class="fas fa-shield-alt"></i></div>
-            <span>Confidentialité</span>
-        </a>
-    </div>
+    <!-- Features Section -->
+    <section class="features" id="points-cles">
+        <div class="container">
+            <h2 class="section-title">Points Clés de l'Ouvrage</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3 class="feature-title">Islam Confrérique Sénégalais</h3>
+                    <p>Une analyse approfondie de l'islam confrérique au Sénégal, ses spécificités et son évolution dans le contexte contemporain.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="feature-title">Équilibre et Modération</h3>
+                    <p>Un plaidoyer pour un islam équilibré et lumineux, rejetant les extrémismes et les dérives doctrinales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">Science et Connaissance</h3>
+                    <p>La place centrale des sciences et de la connaissance comme piliers fondamentaux de la pratique islamique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="author-section" id="auteur">
+        <div class="container">
+            <div class="author-container">
+                <div class="author-info">
+                    <h2 class="author-name">Ahmed Khalifa Niasse</h2>
+                    <p class="author-bio">
+                        Homme politique sénégalais, homme d'affaires et chef religieux issu de la famille Niasse de Kaolack. 
+                        Il a occupé plusieurs fonctions importantes dans le gouvernement du Sénégal et est reconnu pour son 
+                        influence et ses relations avec de nombreux chefs d'État.
+                    </p>
+                    <p class="author-bio">
+                        Son père, Muhammad Al Khalifa Niasse, était un grand érudit et premier khalife de la branche niassène 
+                        de la Tijania. Ahmed Khalifa Niasse est également président et fondateur du Front des Alliances Patriotiques (FAP).
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
+                </div>
+                <div class="author-image">
+                    <img src="https://i.postimg.cc/j53F1cSj/79645064-57653267.jpg" alt="Ahmed Khalifa Niasse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2 class="cta-title">Découvrez Pensées Actuelles</h2>
+            <p class="cta-text">
+                Plongez dans cette analyse captivante de l'Islam contemporain et découvrez les perspectives uniques 
+                d'Ahmed Khalifa Niasse sur les enjeux religieux et sociétaux actuels.
+            </p>
+            <a href="#" class="btn">Obtenir le livre</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Pensées Actuelles</div>
+                    <p>Une œuvre majeure sur l'Islam contemporain par Ahmed Khalifa Niasse.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#livre">Le Livre</a></li>
+                        <li><a href="#auteur">L'Auteur</a></li>
+                        <li><a href="#points-cles">Points Clés</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:contact@pensees-actuelles.com">contact@pensees-actuelles.com</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Pensées Actuelles. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Fonctionnalité de basculement du mode sombre
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle.querySelector('i');
-        
-        // Vérifier la préférence de thème stockée
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
-        
-        themeToggle.addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
         
-        // Animation d'apparition progressive
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            
-            sections.forEach((section, index) => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                
-                setTimeout(() => {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }, 200 + (index * 100));
+        // Simple animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.book-container, .feature-card, .author-container').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
         });
     </script>
 </body>
